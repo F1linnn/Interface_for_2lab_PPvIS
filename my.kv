@@ -1,0 +1,356 @@
+<CustLabel@Label>:
+    color: .761, .190, .810, 1
+<LogIn>:
+    name: "login"
+    BoxLayout:
+        orientation: "vertical"
+        GridLayout:
+            cols: 2
+            Label:
+                size_hint_x: 1
+                text: "Name"
+
+            TextInput:
+                size_hint_x: 0.2
+                size_hint_y: 1
+                id: login
+                multiline: False
+
+            Label:
+                size_hint_x: 1
+                text: "password"
+
+            TextInput:
+                size_hint_x: 1
+                id: login
+                multiline: False
+
+        Button:
+            pos_hint: {'center_x':0.5, 'center_y':0.5}
+            size_hint_x: .5
+            size_hint_y: .2
+            text: "Submit"
+            on_release:
+                app.root.current = "main_menu"
+                root.manager.transition.direction = "left"
+
+        Button:
+            pos_hint: {'center_x':0.5, 'center_y':0.5}
+            size_hint_x: .5
+            size_hint_y: .2
+            text: "Create new profile"
+            on_release:
+                app.root.current = "NewProfile"
+
+<NewProfile>:
+    name: "NewProfile"
+    BoxLayout:
+        orientation: "vertical"
+        GridLayout:
+            cols: 2
+            Label:
+                size_hint_x: 1
+                text: "Name"
+
+            TextInput:
+                size_hint_x: 0.2
+                size_hint_y: 1
+                id: login
+                multiline: False
+
+            Label:
+                size_hint_x: 1
+                text: "password"
+
+            TextInput:
+                size_hint_x: 1
+                id: login
+                multiline: False
+
+        Button:
+            pos_hint: {'center_x':0.5, 'center_y':0.5}
+            size_hint_x: .5
+            size_hint_y: .2
+            text: "Create new profile"
+            on_release:
+                app.root.current = "main_menu"
+                root.manager.transition.direction = "left"
+
+        Button:
+            pos_hint: {'center_x':0.5, 'center_y':0.5}
+            size_hint_x: .5
+            size_hint_y: .2
+            text: "Back"
+            on_release:
+                app.root.current = "LogIn"
+
+<Main_Menu>:
+    name: "main_menu"
+    BoxLayout:
+        orientation: "vertical"
+        GridLayout:
+            cols: 3
+            Button:
+                text: "Меню"
+                size_hint: 1, .1
+                font_size:15
+                on_release: app.root.current = "dop_menu"
+
+            Button:
+                size_hint: 1, .1
+                text: "Баланс ____$"
+                font_size:15
+
+            Button:
+                text: "Профиль"
+                size_hint: 1, .1
+                font_size:15
+                on_release:
+                    app.root.current = "profile"
+        Label
+            size_hint: 1, 5
+    Button:
+        text: "Доходы"
+        pos_hint: {'center_x':0.2, 'center_y':0.1}
+        size_hint_x: .4
+        size_hint_y: .1
+        font_size:20
+        on_release:
+            app.root.current = "dohod"
+
+    Button:
+        size_hint_x: .3
+        size_hint_y: .1
+        pos_hint: {'center_x':0.55, 'center_y':0.1}
+        text: "Расходы"
+        font_size:20
+        on_release:
+            app.root.current = "rashod"
+
+    Button:
+        text: "Диаграммы"
+        pos_hint: {'center_x':0.85, 'center_y':0.1}
+        size_hint_x: .3
+        size_hint_y: .1
+        font_size:20
+
+<Profile>:
+    name: "profile"
+    Button:
+        pos_hint: {'center_x':0.15, 'center_y':.95}
+        size_hint_x: .3
+        size_hint_y: .1
+        text: "Меню"
+    Button:
+        pos_hint: {'center_x':0.85, 'center_y':.95}
+        size_hint_x: .3
+        size_hint_y: .1
+        text: "Профиль"
+        on_release: app.root.current = "main_menu"
+
+    Button:
+        pos_hint: {'center_x':0.5, 'center_y':0.8}
+        size_hint_x: .3
+        size_hint_y: .1
+        text: "Изменить профиль"
+    Button:
+        pos_hint: {'center_x':0.5, 'center_y':0.7}
+        size_hint_x: .3
+        size_hint_y: .1
+        text: "Выйти"
+
+    Button:
+        text: "Доходы"
+        pos_hint: {'center_x':0.2, 'center_y':0.1}
+        size_hint_x: .4
+        size_hint_y: .1
+        font_size:20
+
+    Button:
+        size_hint_x: .3
+        size_hint_y: .1
+        pos_hint: {'center_x':0.55, 'center_y':0.1}
+        text: "Расходы"
+        font_size:20
+
+    Button:
+        text: "Диаграммы"
+        pos_hint: {'center_x':0.85, 'center_y':0.1}
+        size_hint_x: .3
+        size_hint_y: .1
+        font_size:20
+
+<Dohod>:
+    name: "dohod"
+    Label:
+        pos_hint: {'center_x':0.12, 'center_y':0.75}
+        text: "Сумма"
+    Label:
+        pos_hint: {'center_x':0.5, 'center_y':0.95}
+        text: "Доходы"
+        font_size:30
+    Label:
+        pos_hint: {'center_x':0.2, 'center_y':0.9}
+        text: "Список доходов 1"
+        font_size:20
+    Label:
+        pos_hint: {'center_x':0.2, 'center_y':0.87}
+        text: "Список доходов 2"
+        font_size:20
+    Label:
+        pos_hint: {'center_x':0.2, 'center_y':0.84}
+        text: "Список доходов 3"
+        font_size:20
+    Label:
+        pos_hint: {'center_x':0.12, 'center_y':0.65}
+        text: "Дата"
+    Label:
+        pos_hint: {'center_x':0.18, 'center_y':0.55}
+        text: "Комментарий"
+
+    TextInput:
+        pos_hint: {'center_x':0.5, 'center_y':0.7}
+        size_hint_x: .9
+        size_hint_y: .05
+        multiline: False
+        text: "Command name"
+    TextInput:
+        pos_hint: {'center_x':0.5, 'center_y':0.6}
+        size_hint_x: .9
+        size_hint_y: .05
+        multiline: False
+        text: "Command name"
+    TextInput:
+        pos_hint: {'center_x':0.5, 'center_y':0.5}
+        size_hint_x: .9
+        size_hint_y: .05
+        multiline: False
+        text: "Command name"
+
+    Button:
+        text: "Добавить доход"
+        pos_hint: {'center_x':0.5, 'center_y':0.3}
+        size_hint_x: .4
+        size_hint_y: .1
+        font_size:20
+
+
+    Button:
+        text: "Доходы"
+        pos_hint: {'center_x':0.2, 'center_y':0.1}
+        size_hint_x: .4
+        size_hint_y: .1
+        font_size:20
+        on_release:
+            app.root.current = "main_menu"
+
+    Button:
+        size_hint_x: .3
+        size_hint_y: .1
+        pos_hint: {'center_x':0.55, 'center_y':0.1}
+        text: "Расходы"
+        font_size:20
+
+    Button:
+        text: "Диаграммы"
+        pos_hint: {'center_x':0.85, 'center_y':0.1}
+        size_hint_x: .3
+        size_hint_y: .1
+        font_size:20
+
+<Rashod>:
+    name: "rashod"
+    Label:
+        pos_hint: {'center_x':0.5, 'center_y':0.95}
+        text: "Расходы"
+        font_size:30
+    Label:
+        pos_hint: {'center_x':0.5, 'center_y':0.4}
+        text: "Расход 1 -  ___$"
+    Label:
+        pos_hint: {'center_x':0.5, 'center_y':0.35}
+        text: "Расход 2 -  ___$"
+    Label:
+        pos_hint: {'center_x':0.5, 'center_y':0.3}
+        text: "Расход 3 -  ___$"
+    Image:
+        source:"krug.png"
+        pos_hint: {'center_x':0.5, 'center_y':0.7}
+
+
+
+    Button:
+        text: "Доходы"
+        pos_hint: {'center_x':0.2, 'center_y':0.1}
+        size_hint_x: .4
+        size_hint_y: .1
+        font_size:20
+        on_release:
+            app.root.current = "main_menu"
+
+    Button:
+        size_hint_x: .3
+        size_hint_y: .1
+        pos_hint: {'center_x':0.55, 'center_y':0.1}
+        text: "Расходы"
+        font_size:20
+
+    Button:
+        text: "Диаграммы"
+        pos_hint: {'center_x':0.85, 'center_y':0.1}
+        size_hint_x: .3
+        size_hint_y: .1
+        font_size:20
+
+<Menu_dop>:
+    name: "dop_menu"
+    Button:
+        pos_hint: {'center_x':0.15, 'center_y':.95}
+        size_hint_x: .3
+        size_hint_y: .1
+        text: "Меню"
+    Button:
+        pos_hint: {'center_x':0.85, 'center_y':.95}
+        size_hint_x: .3
+        size_hint_y: .1
+        text: "Профиль"
+        on_release: app.root.current = "main_menu"
+
+    Button:
+        pos_hint: {'center_x':0.5, 'center_y':0.8}
+        size_hint_x: .3
+        size_hint_y: .1
+        text: "Список доходов"
+    Button:
+        pos_hint: {'center_x':0.5, 'center_y':0.7}
+        size_hint_x: .3
+        size_hint_y: .1
+        text: "Список расходов"
+
+    Button:
+        pos_hint: {'center_x':0.5, 'center_y':0.6}
+        size_hint_x: .3
+        size_hint_y: .1
+        text: "О программе"
+
+    Button:
+        text: "Доходы"
+        pos_hint: {'center_x':0.2, 'center_y':0.1}
+        size_hint_x: .4
+        size_hint_y: .1
+        font_size:20
+
+    Button:
+        size_hint_x: .3
+        size_hint_y: .1
+        pos_hint: {'center_x':0.55, 'center_y':0.1}
+        text: "Расходы"
+        font_size:20
+
+    Button:
+        text: "Диаграммы"
+        pos_hint: {'center_x':0.85, 'center_y':0.1}
+        size_hint_x: .3
+        size_hint_y: .1
+        font_size:20
+
