@@ -26,13 +26,28 @@ class Main_menu(Screen):
         pass
 
 class Profile(Screen):
-    pass
+    def show_setings(self):
+        pass
+    def exit(self):
+        pass
 
 class Dohod(Screen):
-    pass
+    def show_incomes(self):
+        pass
 
 class Rashod(Screen):
-    pass
+    def show_consumption(self):
+        pass
 
 class Menu_dop(Screen):
-    pass
+    def show_incomes(self):
+        pass
+
+    def show_consumption(self):
+        pass
+class Diagrams(Screen):
+    def show_window_diagram(self):
+        pass
+
+    def show_diagram(self):
+        pass

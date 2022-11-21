@@ -96,7 +96,7 @@
                 font_size:15
                 on_release: app.root.current = "dop_menu"
 
-            Button:
+            Label:
                 size_hint: 1, .1
                 text: "Баланс ____$"
                 font_size:15
@@ -250,6 +250,7 @@
         pos_hint: {'center_x':0.55, 'center_y':0.1}
         text: "Расходы"
         font_size:20
+        on_release: app.root.current = "rashod"
 
     Button:
         text: "Диаграммы"
@@ -286,7 +287,7 @@
         size_hint_y: .1
         font_size:20
         on_release:
-            app.root.current = "main_menu"
+            app.root.current = "dohod"
 
     Button:
         size_hint_x: .3
@@ -294,6 +295,7 @@
         pos_hint: {'center_x':0.55, 'center_y':0.1}
         text: "Расходы"
         font_size:20
+        on_release: app.root.current = "main_menu"
 
     Button:
         text: "Диаграммы"
@@ -309,12 +311,13 @@
         size_hint_x: .3
         size_hint_y: .1
         text: "Меню"
+        on_release: app.root.current = "main_menu"
     Button:
         pos_hint: {'center_x':0.85, 'center_y':.95}
         size_hint_x: .3
         size_hint_y: .1
         text: "Профиль"
-        on_release: app.root.current = "main_menu"
+        on_release: app.root.current = "profile"
 
     Button:
         pos_hint: {'center_x':0.5, 'center_y':0.8}
@@ -339,6 +342,7 @@
         size_hint_x: .4
         size_hint_y: .1
         font_size:20
+        on_release: app.root.current = "dohod"
 
     Button:
         size_hint_x: .3
@@ -346,6 +350,7 @@
         pos_hint: {'center_x':0.55, 'center_y':0.1}
         text: "Расходы"
         font_size:20
+        on_release: "rashod"
 
     Button:
         text: "Диаграммы"
